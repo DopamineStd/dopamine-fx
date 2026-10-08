@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dopamine FX — all effects demo</title>
+<style>
+  *{box-sizing:border-box}
+  body{margin:0;background:#0b0b0f;color:#f4f4f6;font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+  header{padding:64px 24px 32px;max-width:1100px;margin:auto}
+  header h1{font-size:clamp(36px,6vw,72px);line-height:1;margin:0 0 12px}
+  header p{opacity:.7;margin:0}
+  main{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:20px;padding:24px;max-width:1100px;margin:auto}
+  .card{position:relative;min-height:260px;border-radius:16px;background:#15151c;border:1px solid #24242e;padding:20px;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden}
+  .card code{font-size:12px;opacity:.6}
+  .card h2{font-size:18px;margin:0 0 4px;position:relative;z-index:2}
+  .big{font-size:40px;font-weight:700;line-height:1.1;position:relative;z-index:2}
+  .btn{display:inline-block;padding:12px 22px;border-radius:999px;background:#fff;color:#000;font-weight:600;text-decoration:none;align-self:flex-start}
+  .trail img{display:none}
+  .marquee span{font-size:32px;font-weight:700;white-space:nowrap}
+  footer{padding:48px 24px;text-align:center;opacity:.6}
+  footer a{color:inherit}
+</style>
+</head>
+<body data-dfx="cursor">
+<header>
+  <h1 data-dfx="split-reveal">Dopamine FX</h1>
+  <p>22 free effects for Webflow. One script, one attribute.</p>
+</header>
+
+<main>
+  <div class="card" data-dfx="mesh-gradient"><h2>Mesh Gradient</h2><code>data-dfx="mesh-gradient"</code></div>
+  <div class="card" data-dfx="aurora"><h2>Aurora</h2><code>data-dfx="aurora"</code></div>
+  <div class="card" data-dfx="lightfall"><h2>Lightfall</h2><code>data-dfx="lightfall"</code></div>
+  <div class="card" data-dfx="particles"><h2>Particle Field</h2><code>data-dfx="particles"</code></div>
+  <div class="card" data-dfx="wave-lines"><h2>Wave Lines</h2><code>data-dfx="wave-lines"</code></div>
+  <div class="card" data-dfx="dot-grid"><h2>Dot Grid</h2><code>data-dfx="dot-grid"</code></div>
+  <div class="card" data-dfx="globe" style="min-height:340px"><h2>Dot Globe</h2><code>data-dfx="globe"</code></div>
+  <div class="card" data-dfx="grain" style="background:#2a1b3d"><h2>Film Grain</h2><code>data-dfx="grain"</code></div>
+  <div class="card" data-dfx="spotlight"><h2>Spotlight Border</h2><code>data-dfx="spotlight"</code></div>
+  <div class="card" data-dfx="border-beam"><h2>Border Beam</h2><code>data-dfx="border-beam"</code></div>
+  <div class="card" data-dfx="tilt"><h2>Tilt + Glare</h2><code>data-dfx="tilt"</code></div>
+  <div class="card"><a href="#" class="btn" data-dfx="magnetic">Magnetic button</a><h2 style="margin-top:16px">Magnetic</h2><code>data-dfx="magnetic"</code></div>
+  <div class="card trail" data-dfx="image-trail">
+    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Crect width='200' height='200' fill='%23ff5fa2'/%3E%3C/svg%3E" alt="">
+    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Crect width='200' height='200' fill='%237aa2ff'/%3E%3C/svg%3E" alt="">
+    <h2>Image Trail</h2><code>data-dfx="image-trail"</code></div>
+  <div class="card"><div class="big"><span data-dfx="number-ticker">12,480</span>+</div><h2>Number Ticker</h2><code>data-dfx="number-ticker"</code></div>
+  <div class="card"><div class="big" data-dfx="text-scramble" data-dfx-trigger="hover">Hover me</div><h2>Text Scramble</h2><code>data-dfx="text-scramble"</code></div>
+  <div class="card"><div class="big">We build <span data-dfx="typewriter" data-dfx-words="websites,3D,AI agents">websites</span></div><h2>Typewriter</h2><code>data-dfx="typewriter"</code></div>
+  <div class="card"><div class="big" data-dfx="gooey-text" data-dfx-words="Desire,Gravity,Craving">Desire</div><h2>Gooey Text</h2><code>data-dfx="gooey-text"</code></div>
+  <div class="card"><div class="big" data-dfx="split-reveal" data-dfx-by="char">Split reveal</div><h2>Split Reveal</h2><code>data-dfx="split-reveal"</code></div>
+  <div class="card marquee"><div data-dfx="marquee"><span>Webflow ✦ 3D ✦ AI ✦&nbsp;</span></div><h2>Infinite Marquee</h2><code>data-dfx="marquee"</code></div>
+  <div class="card" style="padding:0"><div style="height:200px;overflow:hidden"><div data-dfx="parallax" style="height:260px;background:linear-gradient(135deg,#ff5fa2,#7aa2ff)"></div></div><div style="padding:20px"><h2>Parallax</h2><code>data-dfx="parallax"</code></div></div>
+  <div class="card" style="padding:0"><img data-dfx="ripple-image" alt="" style="width:100%;height:200px;object-fit:cover;display:block" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='640' height='400'%3E%3Cdefs%3E%3ClinearGradient id='g'%3E%3Cstop offset='0' stop-color='%23ff2e63'/%3E%3Cstop offset='1' stop-color='%235b2bff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='640' height='400' fill='url(%23g)'/%3E%3C/svg%3E"><div style="padding:20px"><h2>Ripple Image</h2><code>data-dfx="ripple-image"</code></div></div>
+  <div class="card" data-dfx-cursor-text="View"><h2>Custom Cursor</h2><code>body data-dfx="cursor" · data-dfx-cursor-text="View"</code></div>
+</main>
+
+<footer>Made by <a href="https://www.dopaminestudio.io/free-webflow-effects">Dopamine Studio</a></footer>
+
+<script src="../dist/dopamine-fx.min.js" defer></script>
+</body>
+</html>
